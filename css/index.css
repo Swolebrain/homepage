@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Exo");
+@import url("https://fonts.googleapis.com/css?family=Rokkitt");
+* {
+  font-family: 'Rokkitt', serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo', sans-serif;
+  text-align: center; }
+
+body {
+  margin: 0; }
+
+#electric {
+  height: 100vh;
+  background: linear-gradient(0deg, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 46%, #000000 54%, #111111 59%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  display: flex;
+  flex-direction: column; }
+
+#electric div {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  font-family: 'Exo', sans-serif; }
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: transparent;
+  transition: color 200ms ease-out, text-shadow 200ms ease-out; }
+
+#electric .victor, #electric .moreno {
+  color: white; }
+
+.luminous {
+  color: #fafafa;
+  text-shadow: 1px 1px 1px #fafafa;
+  opacity: 1; }
+
+.cell.luminous.dim {
+  color: #20202f;
+  text-shadow: none; }
+
+#about-me {
+  background-size: cover;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background-image: linear-gradient(#4c4c4c 0%, #555555 10%, white 100%); }
+
+#about-me > .bgdiv {
+  width: 200%;
+  position: absolute;
+  left: 0; }
+
+#about-me > .bgdiv > img {
+  width: 100%;
+  transform: translate(-25%, -25%); }
+
+.about-content {
+  z-index: 10;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.about-content * {
+  color: #30303b; }
+
+.about-content p {
+  width: 80%;
+  min-width: 300px;
+  font-size: 1.5rem;
+  text-align: center; }
+
+.phloat {
+  padding: 1rem;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto; }
+
+.shape-v {
+  float: left;
+  width: 25%;
+  shape-outside: url(../img/v.svg);
+  clip: url(../img/v.svg);
+  shape-margin: 1rem;
+  margin: 0 1rem; }
+
+.shape-m {
+  float: right;
+  width: 25%;
+  shape-outside: url(../img/m.svg);
+  clip: url(../img/m.svg);
+  shape-margin: 1rem;
+  margin-left: 0 1rem; }
+
+.phloat::after {
+  content: "";
+  clear: both;
+  display: block; }
+
+.alignright {
+  text-align: right; }
+
+@media screen and (max-width: 400px) {
+  .shape-m, .shape-v {
+    width: 50%; } }
+@keyframes slide-out {
+  100% {
+    transform: scale(1, 1); } }
+#skills {
+  display: flex;
+  min-height: 50vh;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px; }
+
+.skill {
+  display: flex;
+  box-sizing: border-box;
+  flex: 1 0 300px;
+  flex-direction: row;
+  margin: 0 1rem 3rem 1rem;
+  align-items: center; }
+
+.logo h3 {
+  margin: 0;
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.logo {
+  flex: 1;
+  position: relative; }
+
+.logo img {
+  width: 100%; }
+
+.proficiency {
+  flex: 4;
+  height: 3rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  transform: scale(0, 1);
+  transform-origin: left; }
+
+.proficiency div {
+  width: 100%;
+  height: 100%; }
+
+.animated {
+  animation: slide-out;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+.proficiency.proficient div {
+  width: 80%; }
+
+.proficiency.competent div {
+  width: 60%; }
+
+.ajax div {
+  background-color: #4594CB; }
+
+.angular div {
+  background-color: #E52A3A;
+  animation-delay: 500ms; }
+
+.react div {
+  background-color: #00D8FF;
+  animation-delay: 1000ms; }
+
+.redux div {
+  background-color: #764ABC;
+  animation-delay: 1500ms; }
+
+.node div {
+  background-color: #90C53F;
+  animation-delay: 2000ms; }
+
+.js div {
+  background-color: #F0DB4F;
+  animation-delay: 2500ms; }
+
+.jquery div {
+  background-color: #193556;
+  animation-delay: 3000ms; }
+
+.mongodb div {
+  background-color: #412F1F;
+  animation-delay: 3500ms; }
+
+.mysql div {
+  background-color: #58C0A7;
+  animation-delay: 4000ms; }
+
+.aws div {
+  background-color: #FF9900;
+  animation-delay: 4500ms; }
+
+.jenkins div {
+  background-color: #F0D6B7;
+  animation-delay: 5000ms; }
+
+.java div {
+  background-color: #7091C4;
+  animation-delay: 5500ms; }
+
+.ajax div {
+  background-color: #4594CB; }
+
+.js {
+  animation-delay: 500ms; }
+
+.jquery {
+  animation-delay: 1000ms; }
+
+.angular {
+  animation-delay: 1500ms; }
+
+.react {
+  animation-delay: 2000ms; }
+
+.redux {
+  animation-delay: 2500ms; }
+
+.node {
+  animation-delay: 3000ms; }
+
+.mongodb {
+  animation-delay: 3500ms; }
+
+.mysql {
+  animation-delay: 4000ms; }
+
+.aws {
+  animation-delay: 4500ms; }
+
+.jenkins {
+  animation-delay: 5000ms; }
+
+.java {
+  animation-delay: 5500ms; }
+
+/*# sourceMappingURL=index.css.map */

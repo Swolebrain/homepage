@@ -1,0 +1,72 @@
+#about-me{
+  background-size: cover;
+  padding: 6rem 0 ;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  background-image: linear-gradient(#4c4c4c 0%, #555555 10%, white 100%);
+}
+#about-me>.bgdiv{
+  width: 200%;
+  position:absolute;
+  left: 0;
+}
+#about-me>.bgdiv>img{
+  width:100%;
+  transform: translate(-25%, -25%);
+
+}
+.about-content{
+  z-index: 10;
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-content *{
+  color: #30303b;
+}
+.about-content p{
+  width: 80%;
+  min-width: 300px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.phloat{
+  padding: 1rem;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.shape-v{
+  float:left;
+  width: 25%;
+  shape-outside: url(../img/v.svg);
+  clip: url(../img/v.svg);
+  shape-margin: 1rem;
+  margin: 0 1rem;
+}
+.shape-m{
+  float:right;
+  width: 25%;
+  shape-outside: url(../img/m.svg);
+  clip: url(../img/m.svg);
+  shape-margin:1rem;
+  margin-left: 0 1rem;
+}
+
+.phloat::after{
+  content: "";
+  clear:both;
+  display:block;
+}
+.alignright{
+  text-align: right;
+}
+
+@media screen and (max-width:400px){
+  .shape-m, .shape-v{
+    width: 50%;
+  }
+}

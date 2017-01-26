@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+}
+#electric{
+  height: 100vh;
+  background: linear-gradient(
+  0deg, #4c4c4c 0%,
+  #595959 12%,
+  #666666 25%,
+  #474747 39%,
+  #2c2c2c 46%,
+  #000000 54%,
+  #111111 59%,
+  #2b2b2b 76%,
+  #1c1c1c 91%,
+  #131313 100%);
+  display: flex;
+  flex-direction: column;
+}
+#electric div{
+  flex:1;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y:hidden;
+  font-family: 'Exo', sans-serif;
+}
+.cell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: transparent;
+  transition: color 200ms ease-out, text-shadow 200ms ease-out;
+}
+#electric .victor, #electric .moreno{
+  color: white;
+}
+.luminous{
+  color: #fafafa;
+  text-shadow: 1px 1px 1px #fafafa;
+  opacity:1;
+}
+.cell.luminous.dim{
+  color: #20202f;
+  text-shadow: none;
+}
