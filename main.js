@@ -37,11 +37,11 @@ function initializeElectric(){
 function writeVictor(){
   var victor = document.querySelectorAll(".victor");
   Array.prototype.forEach.call(victor, function(td, idx){
-    td.innerHTML = "Victor".substr(idx, 1);
+    td.innerHTML = "VICTOR".substr(idx, 1);
   });
   var moreno = document.querySelectorAll(".moreno");
   Array.prototype.forEach.call(moreno, function(td, idx){
-    td.innerHTML = "Moreno".substr(idx, 1);
+    td.innerHTML = "MORENO".substr(idx, 1);
   });
 }
 
