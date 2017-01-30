@@ -4,7 +4,11 @@
   position:relative;
   overflow:hidden;
   display:flex;
-  background-image: linear-gradient(#4c4c4c 0%, #555555 10%, white 100%);
+  background-image: linear-gradient(#4c4c4c 0%, #555555 12%, white 100%),
+  // background-image: linear-gradient(0deg, #FFFFFF 0%, #d6d6d6 10%, transparent 100%),
+  //                   linear-gradient(#4c4c4c 0%, #555555 10%, transparent 100%);
+  // background-image: linear-gradient(#4c4c4c 0%, #555555 10%, transparent 100%),
+  //                   linear-gradient(0deg, #FFFFFF 0%, #d6d6d6 10%, transparent 100%);
 }
 #about-me>.bgdiv{
   width: 200%;

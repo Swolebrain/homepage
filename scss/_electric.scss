@@ -37,11 +37,11 @@ body{
   color: white;
 }
 .luminous{
-  color: #fafafa;
-  text-shadow: 1px 1px 1px #fafafa;
+  color: #fafafa !important;
+  text-shadow: 1px 1px 1px #fafafa !important;
   opacity:1;
 }
-.cell.luminous.dim{
+.dim{
   color: #20202f;
   text-shadow: none;
 }

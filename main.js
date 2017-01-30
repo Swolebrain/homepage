@@ -69,21 +69,21 @@ function startWave(){
   tickWave();
 
   function tickWave(){
-    var lit = document.querySelectorAll(".luminous");
-    Array.prototype.forEach.call(lit, function(e){
-      e.classList.add("dim");
-    });
     luminousR += Math.random()>0.5?0:startDirectionY;
     luminousC += Math.random()>0.65?0:startDirectionX;
     if (luminousR < 0 || luminousC < 0 ) return;
     var elem = document.getElementById(luminousR+"-"+luminousC);
     if (!elem) return;
     elem.classList.add("luminous");
+    setTimeout(function(){
+      elem.classList.remove("luminous");
+      elem.classList.add("dim");
+    },300);
     setTimeout(tickWave, 200);
   }
 }
 
-setInterval(startWave, 300);
+setInterval(startWave, 200);
 
 
 /*
@@ -101,4 +101,48 @@ document.onscroll = function(){
       $prof.classList.add("animated");
     });
   }
+}
+
+/*
+  FORM SUBMIT
+*/
+document.getElementById("form-submit").addEventListener("click", function(){
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var msg = document.getElementById("msg").value;
+  if (!name) return displayAlert("You must enter your name");
+  if (!email) return displayAlert("Please enter your email");
+  if (!msg) return displayAlert("Please enter your Request");
+});
+
+function displayAlert(str){
+  console.log(str);
+}
+
+/*
+  Bottom Canvas
+*/
+
+var wires = new Image();
+wires.src="../img/wires.png";
+wires.onload = function(){
+  c.height = wires.naturalHeight;
+  canvasLoop();
+};
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+c.width = window.innerWidth;
+c.height = window.innerHeight/4;
+
+var x = 0, y = 0;
+function canvasLoop(){
+  ctx.clearRect(0,0,c.width, c.height);
+  for (var offset = x; offset <= window.innerWidth; offset+=wires.naturalWidth){
+    ctx.drawImage(wires, offset, y);
+  }
+  x -= 0.1;
+  if (x <= -wires.naturalWidth){
+    x = 0;
+  }
+  window.requestAnimationFrame(canvasLoop);
 }
