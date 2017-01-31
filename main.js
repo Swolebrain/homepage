@@ -113,10 +113,25 @@ document.getElementById("form-submit").addEventListener("click", function(){
   if (!name) return displayAlert("You must enter your name");
   if (!email) return displayAlert("Please enter your email");
   if (!msg) return displayAlert("Please enter your Request");
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://www.titanhack.com:8001/');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = function(){
+    console.log(this.status);
+    displayAlert("Message sent successfully!");
+  }
+  xhr.send(JSON.stringify({name:name, email:email, message: msg}));
 });
 
+var timeout;
 function displayAlert(str){
-  console.log(str);
+  clearTimeout(timeout);
+  var feedback = document.getElementById("feedback");
+  feedback.innerHTML = str;
+  feedback.classList.remove("hidden");
+  timeout = setTimeout(function(){
+    feedback.classList.add("hidden");
+  },1500);
 }
 
 /*

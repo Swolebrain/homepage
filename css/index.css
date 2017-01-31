@@ -389,6 +389,15 @@ body {
   margin: 0 auto;
   text-align: center; }
 
+#feedback {
+  transition: opacity 1s ease-in-out; }
+
+#feedback.hidden {
+  opacity: 0; }
+
+#feedback.shown {
+  opacity: 1; }
+
 .form-container {
   background: transparent;
   margin: 2rem auto 0 auto;
@@ -448,7 +457,9 @@ form {
       letter-spacing: 0.05em; }
       form .field input[type="text"]#msg,
       form .field textarea#msg {
-        height: 18px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
         resize: none;
         -webkit-transition: all 333ms ease-in-out;
         -moz-transition: all 333ms ease-in-out;
@@ -459,10 +470,6 @@ form {
       form .field textarea:focus,
       form .field textarea.focused {
         outline: none; }
-        form .field input[type="text"]:focus#msg, form .field input[type="text"].focused#msg,
-        form .field textarea:focus#msg,
-        form .field textarea.focused#msg {
-          padding-bottom: 150px; }
         form .field input[type="text"]:focus + label, form .field input[type="text"].focused + label,
         form .field textarea:focus + label,
         form .field textarea.focused + label {
